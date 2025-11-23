@@ -6,6 +6,8 @@
 
 # PLUGINS = ["netbox_bgp"]
 
+PLUGINS = ["netbox_topology_views"]
+
 # PLUGINS_CONFIG = {
 #   "netbox_bgp": {
 #     ADD YOUR SETTINGS HERE
