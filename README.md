@@ -1,3 +1,8 @@
+## Plugins deployment
+
+[netbox-plugins]:https://netboxlabs.com/plugins/
+[netbox-plugins-wiki]:https://github.com/netbox-community/netbox-docker/wiki/Using-Netbox-Plugins
+
 # netbox-docker
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/netbox-community/netbox-docker)][github-release]
