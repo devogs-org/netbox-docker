@@ -6,7 +6,10 @@
 
 # PLUGINS = ["netbox_bgp"]
 
-PLUGINS = ["netbox_topology_views"]
+PLUGINS = [
+    "netbox_topology_views",
+    "netbox_bgp"
+    ]
 
 # PLUGINS_CONFIG = {
 #   "netbox_bgp": {
