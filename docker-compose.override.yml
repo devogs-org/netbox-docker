@@ -1,9 +1,8 @@
 services:
   netbox:
-    # Transitional: the wg0 mapping stays until the remaining clients (Semaphore environment) use http://netbox:8080
+    # Break-glass only: loopback. Clients use https://netbox.<DOMAIN> or http://netbox:8080 over the backend network
     ports:
       - "127.0.0.1:8001:8080"
-      - "10.255.255.1:8001:8080"
     # Traefik front door: https://netbox.<DOMAIN>. `backend` is the service-to-service network (netbox-mcp, Semaphore, ...)
     networks:
       default: {}
