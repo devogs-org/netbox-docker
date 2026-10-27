@@ -15,6 +15,7 @@ services:
       traefik.http.routers.netbox.rule: "Host(`netbox.${DOMAIN:-devogs.xyz}`)"
       traefik.http.routers.netbox.entrypoints: "websecure"
       traefik.http.routers.netbox.tls: "true"
+      traefik.http.routers.netbox.tls.certresolver: "vault"
       traefik.http.routers.netbox.middlewares: "internal-only@file,secure-headers@file"
       traefik.http.services.netbox.loadbalancer.server.port: "8080"
     # healthcheck:
