@@ -1,2 +1,3 @@
 netbox-topology-views
-netbox-bgp
+netbox-routing
+netbox-acls
