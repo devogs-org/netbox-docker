@@ -4,12 +4,11 @@
 # To learn how to build images with your required plugins
 # See https://github.com/netbox-community/netbox-docker/wiki/Using-Netbox-Plugins
 
-# PLUGINS = ["netbox_bgp"]
-
 PLUGINS = [
     "netbox_topology_views",
-    "netbox_bgp"
-    ]
+    "netbox_routing",
+    "netbox_acls",
+]
 
 # PLUGINS_CONFIG = {
 #   "netbox_bgp": {

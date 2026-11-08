@@ -1,5 +1,12 @@
 services:
   netbox:
+    # Stock image + plugins (topology views, routing, ACLs), see Dockerfile-Plugins
+    image: netbox-plugins:${VERSION-v4.7.4-5.1.1}
+    build:
+      context: .
+      dockerfile: Dockerfile-Plugins
+      args:
+        VERSION: ${VERSION-v4.7.4-5.1.1}
     # Break-glass only: loopback. Clients use https://netbox.<DOMAIN> or http://netbox:8080 over the backend network
     ports:
       - "127.0.0.1:8001:8080"
@@ -40,6 +47,8 @@ services:
     # secrets:
       # - okta_openidconnect_secret
       # - google_oauth2_secret
+  netbox-worker:
+    image: netbox-plugins:${VERSION-v4.7.4-5.1.1}
 
 networks:
   proxy:
